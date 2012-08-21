@@ -1,4 +1,3 @@
-#coding=utf-
 """
 Dijkstra's algorithm's pseudocode (from Wikipedia):
 
@@ -21,7 +20,7 @@ function Dijkstra(Graph, source):
             alt := dist[u] + dist_between(u, v) ;
             if alt < dist[v]:                                  // Relax (u,v,a)
                 dist[v] := alt ;
-                previous[v] := u ;º
+                previous[v] := u ;
                 decrease-key v in Q;                           // Reorder v in the Queue
     return dist;
 """
@@ -79,23 +78,3 @@ def dijkstra(graph, s, d):
     path.reverse()
 
     return path, distance[d]
-
-
-if __name__ == "__main__":
-    node_1 = (1, 0)
-    node_2 = (0, 1)
-    node_3 = (2, 1)
-    node_4 = (2, 3)
-    node_5 = (4, 2)
-    node_6 = (3, 0)
-
-    graph = {node_1: {"neighbors": [node_2, node_3, node_6]},
-             node_2: {"neighbors": [node_1, node_3, node_4]},
-             node_3: {"neighbors": [node_1, node_2, node_4, node_6]},
-             node_4: {"neighbors": [node_2, node_3, node_5]},
-             node_5: {"neighbors": [node_4, node_6]},
-             node_6: {"neighbors": [node_1, node_3, node_5]}
-             }
-    path, distance = dijkstra(graph, node_1, node_5)
-    print "Path %s" % path
-    print "Path distance is %s " % distance
