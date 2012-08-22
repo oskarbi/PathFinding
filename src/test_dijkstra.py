@@ -1,9 +1,10 @@
 import unittest
 from dijkstra import dijkstra
 
-class Test1TestCase(unittest.TestCase):
+class TestDijkstra(unittest.TestCase):
 
-    def testOneNode(self):
+    def test_one_node(self):
+        """Graph with a unique vertice."""
         node_1 = (0, 0)
 
         graph = {
@@ -14,7 +15,7 @@ class Test1TestCase(unittest.TestCase):
         self.assertEqual(path, [(0, 0)])
         self.assertEqual(distance, 0.0)
 
-    def testTwoNodes(self):
+    def test_two_nodes(self):
         node_1 = (0, 0)
         node_2 = (0, 1)
 
@@ -27,7 +28,7 @@ class Test1TestCase(unittest.TestCase):
         self.assertEqual(path, [(0, 0), (0, 1)])
         self.assertEqual(distance, 1.0)
 
-    def testThreeNodes(self):
+    def test_three_nodes_1(self):
         """Tres nodos equidistantes."""
         node_1 = (0, 0)
         node_2 = (0, 1)
@@ -43,7 +44,7 @@ class Test1TestCase(unittest.TestCase):
         self.assertEqual(path, [(0, 0), (0, 1)])
         self.assertEqual(distance, 1.0)
 
-    def testThreeNodes2(self):
+    def test_three_nodes_2(self):
         """Tres nodos encadenados en linea recta."""
         node_1 = (0, 0)
         node_2 = (1, 0)
@@ -59,7 +60,7 @@ class Test1TestCase(unittest.TestCase):
         self.assertEqual(path, [(0, 0), (1, 0), (2, 0)])
         self.assertEqual(distance, 2.0)
 
-    def testFourNodes1(self):
+    def test_four_nodes_1(self):
         """Grafo de 4 nodos, todos interconectados."""
         node_1 = (0, 0)
         node_2 = (1, 0)
@@ -77,7 +78,7 @@ class Test1TestCase(unittest.TestCase):
         self.assertEqual(path, [(0, 0), (1, 1)])
         self.assertEqual(round(distance, 5), 1.41421)
 
-    def testFourNodes2(self):
+    def test_four_nodes_2(self):
         """Grafo de 4 nodos, interconectados como un cuadrado."""
         node_1 = (0, 0)
         node_2 = (1, 0)
@@ -95,7 +96,7 @@ class Test1TestCase(unittest.TestCase):
         self.assertEqual(path, [(0, 0), (1, 0), (1, 1)])
         self.assertEqual(distance, 2.0)
 
-    def testSix(self):
+    def test_six_nodes(self):
         """Ejemplo copiado de la Wikipedia."""
         node_1 = (1, 0)
         node_2 = (0, 1)

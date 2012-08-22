@@ -1,5 +1,5 @@
 """
-Dijkstra's algorithm's pseudocode (from Wikipedia):
+Dijkstra algorithm pseudocode (from Wikipedia):
 
 function Dijkstra(Graph, source):
     for each vertex v in Graph:                                // Initializations
