@@ -6,7 +6,7 @@ Implementations of path finding algorithms.
 Dijkstra pseudocode
 -------------------
 
-From `Wikipedia <http://en.wikipedia.org/wiki/Dijkstra's_algorithm#Pseudocode>`_
+From [Wikipedia](http://en.wikipedia.org/wiki/Dijkstra's_algorithm#Pseudocode)
 
     function Dijkstra(Graph, source):
         for each vertex v in Graph:                                // Initializations
@@ -34,7 +34,7 @@ From `Wikipedia <http://en.wikipedia.org/wiki/Dijkstra's_algorithm#Pseudocode>`_
 A* pseudocode
 -------------
 
-From `Wikipedia <http://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode>`_
+From [Wikipedia](http://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode)
 
     function A*(start, goal)
          closedset := the empty set     // The set of nodes already evaluated.
