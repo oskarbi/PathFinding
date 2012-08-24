@@ -3,11 +3,10 @@ PathFinding
 
 Implementations of path finding algorithms.
 
-Pseudocode for the implemented algorithms (from Wikipedia):
-
 Dijkstra pseudocode
 -------------------
-::
+
+From `Wikipedia <http://en.wikipedia.org/wiki/Dijkstra's_algorithm#Pseudocode>`_
 
     function Dijkstra(Graph, source):
         for each vertex v in Graph:                                // Initializations
@@ -34,7 +33,8 @@ Dijkstra pseudocode
 
 A* pseudocode
 -------------
-::
+
+From `Wikipedia <http://en.wikipedia.org/wiki/A*_search_algorithm#Pseudocode>`_
 
     function A*(start, goal)
          closedset := the empty set     // The set of nodes already evaluated.
